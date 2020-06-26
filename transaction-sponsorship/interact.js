@@ -10,7 +10,7 @@ async function main() {
     url: "http://testnet-jsonrpc.conflux-chain.org:12537",
     defaultGasPrice: 100,
     defaultGas: 1000000,
-    logger: console,
+    // logger: console,
   });
 
   console.log(cfx.defaultGasPrice); // 100
