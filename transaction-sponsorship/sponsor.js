@@ -24,7 +24,7 @@ async function main() {
   const account = cfx.Account(PRIVATE_KEY); // create account instance
   console.log(account.address); // 0x1bd9e9be525ab967e633bcdaeac8bd5723ed4d6b
 
-  // // ================================ Deploy Contract ================================
+  // ================================ Deploy Contract ================================
   // const contract = cfx.Contract({
   //   abi: require('./contract/abi.json'), //can be copied from remix
   //   bytecode: require('./contract/bytecode.json'),
@@ -34,7 +34,7 @@ async function main() {
   // const receipt = await contract.constructor()
   //   .sendTransaction({ from: account});
   // console.log(receipt);
-  const CONTRACT_ADDRESS = "0x8a66e831b5e7865eb05cc3742c8ff336686cf8d3"; //previously deployed contract
+  const CONTRACT_ADDRESS = "0x8272bc455a2afd32040945d95646b166859e3b70"; //previously deployed contract
 
   // ================================ SponsorContract ================================
   // create sponsor contract instance
@@ -42,15 +42,15 @@ async function main() {
     abi: sponsor.abi, //sponsorship contract abi
     address: sponsor_contract_addr,
   });
-
-  // setup sponsorship
-  const receipt = await sponsor_contract
-    .set_sponsor_for_gas(CONTRACT_ADDRESS, upper_bound)
-    .sendTransaction({
-      from: account,
-      value: sponsor_value,
-    });
-  console.log(receipt);
+  //
+  // // setup sponsorship
+  // const receipt = await sponsor_contract
+  //   .set_sponsor_for_gas(CONTRACT_ADDRESS, upper_bound)
+  //   .sendTransaction({
+  //     from: account,
+  //     value: sponsor_value,
+  //   });
+  // console.log(receipt);
 
   const receipt2 = await sponsor_contract
     .set_sponsor_for_collateral(CONTRACT_ADDRESS)
@@ -58,7 +58,7 @@ async function main() {
       from: account,
       value: sponsor_value,
     });
-  // console.log(receipt2);
+  console.log(receipt2);
 }
 
 main().catch((e) => console.error(e));

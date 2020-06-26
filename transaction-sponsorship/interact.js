@@ -22,24 +22,24 @@ async function main() {
   console.log(account.address);
 
   const balance = await cfx.getBalance(account.address);
-  console.log(balance);
+  console.log("Balance ", Number(balance));
 
   // ================================ Contract ================================
   // create contract instance
   const contract = cfx.Contract({
     abi: require("./contract/abi.json"), //can be copied from remix
-    address: "0x8a66e831b5e7865eb05cc3742c8ff336686cf8d3",
+    address: "0x8272bc455a2afd32040945d95646b166859e3b70",
   });
 
   // // interact with contract
-  // const receipt = await contract
+  // const receipt0 = await contract
   //   .setValue(20)
   //   .sendTransaction({ from: account });
-  // console.log(receipt);
+  // console.log(receipt0);
 
   // check value from contract
-  const receipt = await contract.value().call({ from: account });
-  console.log(Number(receipt));
+  const receipt1 = await contract.value().call({ from: account });
+  console.log(Number(receipt1));
 }
 
 main().catch((e) => console.error(e));
