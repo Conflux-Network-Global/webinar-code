@@ -42,6 +42,7 @@ async function main() {
   const receipt = await contract.constructor()
     .sendTransaction({ from: account})
   console.log(receipt);
+  //address: 0x80b5f9f22141268d2a1ea50d65eb2838922e3179
 }
 
 main().catch(e => console.error(e));

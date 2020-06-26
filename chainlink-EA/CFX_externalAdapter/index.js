@@ -28,14 +28,13 @@ const main = () => {
 
     // create contract instance
     const contract = cfx.Contract({
-      abi: require("../contractInteraction/contract/abi.json"), //can be copied from remix
-      address: "0x8aa73841e0a0e6e816b2c66c9c5ed1e144ad8cbb",
+      abi: require("../../chainlink-EI/contractInteraction/contract/abi.json"), //can be copied from remix
+      address: "0x80b5f9f22141268d2a1ea50d65eb2838922e3179",
     });
 
     // interact with contract
-    const receipt = await contract.update()
-      .sendTransaction({ from: account })
-      .confirmed();
+    const receipt = await contract.update(req.body.data.result)
+      .sendTransaction({ from: account, chainId: 1 })
     console.log(receipt);
 
     res.status(200).send(output);

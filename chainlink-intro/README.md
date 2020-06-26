@@ -1,6 +1,8 @@
 # Chainlink Introduction
 How to connect Conflux Network and Chainlink. (Conceptual application)
 
+![](./chainlink_intro.png)
+
 Resources:
 - Run a Chainlink node: https://docs.chain.link/docs/running-a-chainlink-node
 - External Initiators for Conflux: https://github.com/Conflux-Network-Global/external-initiator

@@ -24,7 +24,7 @@ async function main() {
   // create contract instance
   const contract = cfx.Contract({
     abi: require("./contract/abi.json"), //can be copied from remix
-    address: "0x8aa73841e0a0e6e816b2c66c9c5ed1e144ad8cbb",
+    address: "0x80b5f9f22141268d2a1ea50d65eb2838922e3179",
   });
 
   // get current number
