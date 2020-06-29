@@ -12,3 +12,4 @@ Repository for various code demonstrations within webinars.
 | `chainlink-intro`         | Conceptual implementation of connecting Chainlink to Conflux     |
 | `chainlink-EI`            | How to send use a Conflux transaction to trigger a Chainlink run |
 | `chainlink-EA`            | How to send information from Chainlink to Conflux                |
+| `local-node-dev-env`      | How to run a local node for a dev environment                    |
