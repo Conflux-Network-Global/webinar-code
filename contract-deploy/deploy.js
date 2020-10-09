@@ -34,7 +34,7 @@ async function main() {
 
   // deploy the contract, and get `contractCreated`
   const receipt = await contract.constructor()
-    .sendTransaction({ from: account});
+    .sendTransaction({ from: account}).executed();
   console.log(receipt);
 }
 

@@ -4,6 +4,6 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "js-conflux-sdk": "^0.10.0-alpha"
+    "js-conflux-sdk": "^0.13.5"
   }
 }

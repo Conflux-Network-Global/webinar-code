@@ -27,7 +27,7 @@ cd ~/.chainlink-ropsten && docker run -p 6688:6688 -v ~/.chainlink-ropsten:/chai
 ```
 
 ### Setting up the External Initiator
-External Initiators for Conflux: https://github.com/Conflux-Network-Global/external-initiator
+External Initiators for Conflux: https://github.com/Conflux-Network-Global/external-initiator (use the `generalized-EI` branch)
 
 Create a `.env` file in the `external-initiator` folder with the following contents:
 

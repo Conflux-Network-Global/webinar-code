@@ -25,7 +25,7 @@ let txParams = {
 };
 
 async function main() {
-  const txHash = await cfx.sendTransaction(txParams);
+  const txHash = await cfx.sendTransaction(txParams).executed();
   console.log(txHash);
 }
 

@@ -29,7 +29,7 @@ async function main() {
 
   // interact with contract
   const receipt = await contract.sendEvent()
-    .sendTransaction({ from: account })
+    .sendTransaction({ from: account }).executed();
   console.log(receipt);
 }
 

@@ -5,7 +5,7 @@ require("dotenv").config();
 const sponsor = require("./contract/sponsor.json");
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
-const sponsor_contract_addr = "0x8ad036480160591706c831f0da19d1a424e39469";
+const sponsor_contract_addr = "0x0888000000000000000000000000000000000001";
 const upper_bound = util.unit.fromGDripToDrip("10");
 const sponsor_value = util.unit.fromCFXToDrip("1");
 
@@ -45,19 +45,19 @@ async function main() {
   //
   // // setup sponsorship
   // const receipt = await sponsor_contract
-  //   .set_sponsor_for_gas(CONTRACT_ADDRESS, upper_bound)
+  //   .setSponsorForGas(CONTRACT_ADDRESS, upper_bound)
   //   .sendTransaction({
   //     from: account,
   //     value: sponsor_value,
-  //   });
+  //   }).executed();
   // console.log(receipt);
 
   const receipt2 = await sponsor_contract
-    .set_sponsor_for_collateral(CONTRACT_ADDRESS)
+    .set_sponsorForCollateral(CONTRACT_ADDRESS)
     .sendTransaction({
       from: account,
       value: sponsor_value,
-    });
+    }).executed();
   console.log(receipt2);
 }
 

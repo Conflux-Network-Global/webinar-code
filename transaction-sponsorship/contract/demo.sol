@@ -7,7 +7,7 @@ contract Demo {
 
     constructor() public {
         //setup contract so gas sponsored for anyone
-        SponsorWhitelistControl cpc = SponsorWhitelistControl(0x8ad036480160591706c831f0DA19D1a424e39469);
+        SponsorWhitelistControl cpc = SponsorWhitelistControl(0x0888000000000000000000000000000000000001);
         address[] memory a = new address[](1);
         a[0] = address(0);
         cpc.add_privilege(a);

@@ -34,7 +34,7 @@ const main = () => {
 
     // interact with contract
     const receipt = await contract.update(req.body.data.result)
-      .sendTransaction({ from: account, chainId: 1 })
+      .sendTransaction({ from: account, chainId: 1 }).executed();
     console.log(receipt);
 
     res.status(200).send(output);
