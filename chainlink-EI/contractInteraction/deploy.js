@@ -9,7 +9,7 @@ async function main() {
   // const defaultGasPrice = util.unit("GDrip", "Drip")(10)
 
   const cfx = new Conflux({
-    url: 'http://testnet-jsonrpc.conflux-chain.org:12537',
+    url: 'http://test.confluxrpc.org',
     defaultGasPrice: 100,
     defaultGas: 1000000,
     logger: console,

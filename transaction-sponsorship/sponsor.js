@@ -11,7 +11,7 @@ const sponsor_value = util.unit.fromCFXToDrip("1");
 
 async function main() {
   const cfx = new Conflux({
-    url: "http://testnet-jsonrpc.conflux-chain.org:12537",
+    url: "http://test.confluxrpc.org",
     defaultGasPrice: 100,
     defaultGas: 1000000,
     // logger: console,
