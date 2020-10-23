@@ -12,6 +12,8 @@ Oceanus <=> Rinkeby Endpoint: [https://dev.shuttleflow.io/](https://dev.shuttlef
 
 Documentation: [https://conflux-dev.github.io/conflux-dex-docs/shuttleflow/](https://conflux-dev.github.io/conflux-dex-docs/shuttleflow/)
 
+Additional documentation: https://github.com/Conflux-Dev/conflux-dex-docs/tree/master/docs/shuttleflow
+
 SDK: [https://www.npmjs.com/package/conflux-crosschain](https://www.npmjs.com/package/conflux-crosschain)
 
 ### Notes
