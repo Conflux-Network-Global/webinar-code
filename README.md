@@ -14,6 +14,6 @@ Repository for various code demonstrations within webinars.
 | `chainlink-EA`            | How to send information from Chainlink to Conflux                       |
 | `local-node-dev-env`      | How to run a local node for a dev environment                           |
 | `web3-stack-intro`        | Brief introduction to the Web3 stack and components - diagram in folder |
-
+| `conflux-truffle`           | Brief demo of Conflx Truffle and Metacoin contracts                     |
 
 ![](./conflux_logo.png)
