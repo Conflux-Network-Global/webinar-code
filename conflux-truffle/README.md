@@ -61,6 +61,13 @@ Deploy the Metacoin smart contracts
 cfxtruffle deploy
 ```
 
+## Shutdown Docker Container
+Once complete (or if you need to restart everything) use the following commands to stop the local node docker container:
+```
+docker kill cfx-node
+docker rm cfx-node
+```
+
 ## Potential Issues
 #### Issue: Missing `from` parameter.
 ```
