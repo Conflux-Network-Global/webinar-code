@@ -851,20 +851,6 @@ is-typedarray@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
   integrity sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
 
-js-conflux-sdk@^0.13.6:
-  version "0.13.6"
-  resolved "https://registry.yarnpkg.com/js-conflux-sdk/-/js-conflux-sdk-0.13.6.tgz#0820c377d9b537f11fd0c0b8874d8f8ce7c18b85"
-  integrity sha512-u/DHiPcoUWdPOB0Bx2+2FSESJP7I3mUl5GnBE2Mrx/WpIlzw8z5m0ecNuy7EBfGR7TpTHDxChd7Z+mhn5lmnEw==
-  dependencies:
-    "@babel/runtime" "^7.8.4"
-    big.js "^5.2.2"
-    jsbi "^3.1.1"
-    keccak "^2.0.0"
-    lodash "^4.17.15"
-    scrypt-js "^3.0.1"
-    secp256k1 "^3.7.1"
-    superagent "^5.1.0"
-
 js-conflux-sdk@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/js-conflux-sdk/-/js-conflux-sdk-0.4.1.tgz#2c961c27ac0e59ea9050c36eaf76f01c007842d9"
@@ -875,6 +861,21 @@ js-conflux-sdk@^0.4.1:
     lodash "^4.17.15"
     secp256k1 "^3.7.1"
     superagent "^5.1.0"
+
+js-conflux-sdk@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/js-conflux-sdk/-/js-conflux-sdk-1.0.0.tgz#22331adac08200a2b062aedd816159cd60cd521e"
+  integrity sha512-8FRGkd6W6varZ0La4iL0apVgu2BURNSfr/CgA48wldA7+VYgghvO0wLcWMc9D7ID2yqVxjuAiCfxu+tQlEOQwA==
+  dependencies:
+    "@babel/runtime" "^7.8.4"
+    big.js "^5.2.2"
+    jsbi "^3.1.1"
+    keccak "^2.0.0"
+    lodash "^4.17.19"
+    scrypt-js "^3.0.1"
+    secp256k1 "^3.7.1"
+    superagent "^5.1.0"
+    websocket "^1.0.31"
 
 js-sha3@0.5.7:
   version "0.5.7"
@@ -906,7 +907,7 @@ keccak@^2.0.0:
     nan "^2.14.0"
     safe-buffer "^5.2.0"
 
-lodash@^4.17.11, lodash@^4.17.15:
+lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.19:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
@@ -1485,7 +1486,7 @@ web3-utils@1.3.0, web3-utils@^1.2.4:
     underscore "1.9.1"
     utf8 "3.0.0"
 
-websocket@^1.0.28, websocket@^1.0.32:
+websocket@^1.0.28, websocket@^1.0.31, websocket@^1.0.32:
   version "1.0.32"
   resolved "https://registry.yarnpkg.com/websocket/-/websocket-1.0.32.tgz#1f16ddab3a21a2d929dec1687ab21cfdc6d3dbb1"
   integrity sha512-i4yhcllSP4wrpoPMU2N0TQ/q0O94LRG/eUQjEAamRltjQ1oT1PFFKOG4i877OlJgCG8rw6LrrowJp+TYCEWF7Q==

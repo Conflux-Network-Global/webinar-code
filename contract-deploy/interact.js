@@ -17,14 +17,14 @@ async function main() {
   console.log(cfx.defaultGas); // 1000000
 
   // ================================ Account =================================
-  const account = cfx.Account(PRIVATE_KEY); // create account instance
+  const account = cfx.wallet.addPrivateKey(PRIVATE_KEY); // create account instance
   console.log(account.address); // 0x1bd9e9be525ab967e633bcdaeac8bd5723ed4d6b
 
   // ================================ Contract ================================
   // create contract instance
   const contract = cfx.Contract({
     abi: require("./contract/abi.json"), //can be copied from remix
-    address: "0x84906f9e3dbb54222ccd74416f52759d71f2e187",
+    address: "0x82b9e4114b1701149710998b7c1cf615fa1d2707",
   });
 
   // // interact with contract

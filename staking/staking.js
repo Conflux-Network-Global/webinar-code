@@ -1,4 +1,4 @@
-const { Conflux, util } = require("js-conflux-sdk");
+const { Conflux, Drip } = require("js-conflux-sdk");
 require("dotenv").config();
 const staking = require("./staking.json");
 
@@ -13,7 +13,7 @@ async function main() {
 
   //account initialization
   const PRIVATE_KEY = process.env.PRIVATE_KEY;
-  const account = cfx.Account(PRIVATE_KEY); // create account instance
+  const account = cfx.wallet.addPrivateKey(PRIVATE_KEY); // create account instance
 
   //staking contract initialization
   const contract = cfx.Contract({
@@ -23,7 +23,7 @@ async function main() {
 
   //deposit CFX
   const tx0 = await contract
-    .deposit(util.unit.fromCFXToDrip(1))
+    .deposit(Drip.fromCFX(1))
     .sendTransaction({ from: account })
     .executed();
   console.log(tx0);
@@ -34,7 +34,7 @@ async function main() {
 
   // //withdraw CFX
   // const tx1 = await contract
-  //   .withdraw(util.unit.fromCFXToDrip(1))
+  //   .withdraw(Drip.fromCFX(1))
   //   .sendTransaction({ from: account })
   //   .executed();
   // console.log(tx1);

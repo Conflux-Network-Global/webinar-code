@@ -1,10 +1,9 @@
-const { Conflux, util } = require('js-conflux-sdk');
+const { Conflux } = require('js-conflux-sdk');
 require("dotenv").config();
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
 async function main() {
-  // const defaultGasPrice = util.unit("GDrip", "Drip")(10)
 
   const cfx = new Conflux({
     url: 'http://test.confluxrpc.org',
@@ -17,7 +16,7 @@ async function main() {
   console.log(cfx.defaultGas); // 1000000
 
   // ================================ Account =================================
-  const account = cfx.Account(PRIVATE_KEY); // create account instance
+  const account = cfx.wallet.addPrivateKey(PRIVATE_KEY); // create account instance
   console.log(account.address); // 0x1bd9e9be525ab967e633bcdaeac8bd5723ed4d6b
 
   // ================================ Contract ================================

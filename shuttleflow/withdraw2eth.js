@@ -1,4 +1,5 @@
-const { Conflux, util } = require("js-conflux-sdk");
+const { Conflux, Drip } = require("js-conflux-sdk");
+
 require("dotenv").config();
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
@@ -12,7 +13,7 @@ async function main() {
   });
 
   // ================================ Account =================================
-  const account = cfx.Account(PRIVATE_KEY); // create account instance
+  const account = cfx.wallet.addPrivateKey(PRIVATE_KEY); // create account instance
   console.log(account.address); // 0x1bd9e9be525ab967e633bcdaeac8bd5723ed4d6b
 
   // ================================ Contract ================================
@@ -26,8 +27,8 @@ async function main() {
   const receipt = await contract
     .burn(
       account.address, //cfx address
-      util.unit.fromCFXToDrip(0.495), //amount to withdraw from conflux
-      util.unit.fromCFXToDrip(0.005), //amount of fees to pay (found in the corresponding shuttleflow token info)
+      Drip.fromCFX(0.495), //amount to withdraw from conflux
+      Drip.fromCFX(0.005), //amount of fees to pay (found in the corresponding shuttleflow token info)
       "0xAE36E9B5086B76Fd960b90A9cD33d5CFd7536267", //ethereum address
       "0x0000000000000000000000000000000000000000" //type of withdrawal (matching defi_address)
     )

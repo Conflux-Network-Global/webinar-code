@@ -6,6 +6,6 @@
   "dependencies": {
     "conflux-crosschain": "^1.2.1",
     "dotenv": "^8.2.0",
-    "js-conflux-sdk": "^0.13.6"
+    "js-conflux-sdk": "^1.0.0"
   }
 }

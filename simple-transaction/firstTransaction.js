@@ -1,4 +1,5 @@
-const { Conflux, util } = require("js-conflux-sdk");
+const { Conflux, Drip } = require("js-conflux-sdk");
+
 require("dotenv").config();
 
 const cfx = new Conflux({
@@ -9,7 +10,7 @@ const cfx = new Conflux({
 });
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
-const account = cfx.Account(PRIVATE_KEY); // create account instance
+const account = cfx.wallet.addPrivateKey(PRIVATE_KEY); // create account instance
 const receiver = "0x15fd1E4F13502b1a8BE110F100EC001d0270552d"; //sending to self
 
 let txParams = {
@@ -18,7 +19,7 @@ let txParams = {
   // gasPrice
   // gas
   to: receiver, // accept address string or account instance
-  value: util.unit.fromCFXToDrip(0.125), // use unit to transfer from 0.125 CFX to Drip
+  value: Drip.fromCFX(0.125), // use unit to transfer from 0.125 CFX to Drip
   // storageLimit
   // epochHeight
   // data

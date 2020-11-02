@@ -1,13 +1,13 @@
 /* eslint-disable */
 
-const { Conflux, util } = require("js-conflux-sdk");
+const { Conflux, Drip } = require("js-conflux-sdk");
 require("dotenv").config();
 const sponsor = require("./contract/sponsor.json");
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const sponsor_contract_addr = "0x0888000000000000000000000000000000000001";
-const upper_bound = util.unit.fromGDripToDrip("10");
-const sponsor_value = util.unit.fromCFXToDrip("1");
+const upper_bound = Drip.fromGDrip("10");
+const sponsor_value = Drip.fromCFX("1");
 
 async function main() {
   const cfx = new Conflux({
@@ -21,7 +21,7 @@ async function main() {
   console.log(cfx.defaultGas); // 1000000
 
   // ================================ Account =================================
-  const account = cfx.Account(PRIVATE_KEY); // create account instance
+  const account = cfx.wallet.addPrivateKey(PRIVATE_KEY); // create account instance
   console.log(account.address); // 0x1bd9e9be525ab967e633bcdaeac8bd5723ed4d6b
 
   // ================================ Deploy Contract ================================
