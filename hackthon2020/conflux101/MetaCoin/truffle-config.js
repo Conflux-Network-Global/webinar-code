@@ -1,0 +1,23 @@
+module.exports = {
+  // Uncommenting the defaults below
+  // provides for an easier quick-start with Ganache.
+  // You can also follow this format for other networks;
+  // see <http://truffleframework.com/docs/advanced/configuration>
+  // for more details on how to specify configuration options!
+  //
+  networks: {
+    development: {
+      host: "http://test.confluxrpc.org",
+      port: 12537,
+      network_id: "*",
+      type: "conflux",
+      privateKeys: ["0x<private_key>"]
+    }
+    //  test: {
+    //    host: "127.0.0.1",
+    //    port: 7545,
+    //    network_id: "*"
+    //  }
+  }
+  //
+};
