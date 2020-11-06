@@ -1,6 +1,6 @@
 import React from "react";
-import { util } from "js-conflux-sdk";
 import "./App.css";
+import { Drip } from "js-conflux-sdk";
 
 const status = {
   INSTALL: "Install Conflux Portal",
@@ -30,11 +30,11 @@ function App() {
           break;
         case status.SEND: //send transaction to self on button click through conflux portal
           const tx = {
-            gas: util.format.hex(2000000),
-            gasPrice: util.unit.fromGDripToDrip(0.0000001),
+            // gas: util.format.hex(2000000),
+            // gasPrice: util.unit.fromGDripToDrip(0.0000001),
             from: window.conflux.selectedAddress,
             to: window.conflux.selectedAddress,
-            value: util.unit.fromCFXToDrip(1)
+            value: Drip.fromCFX(1)
           };
           const txResult = await window.confluxJS.sendTransaction(tx);
           setTxReceipt(txResult);
