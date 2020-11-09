@@ -6,7 +6,7 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
 async function main() {
   const cfx = new Conflux({
-    url: "http://main.confluxrpc.org",
+    url: "http://test.confluxrpc.org",
     defaultGasPrice: 100,
     defaultGas: 1000000,
     logger: console
@@ -20,15 +20,15 @@ async function main() {
   // create contract instance
   const contract = cfx.Contract({
     abi: burnABI, //can be copied from remix
-    address: "0x8cc8aad43957ec1887b9ce2102c14fbf48960e7b" //test cETH contract
+    address: "0x8442bc8b5d01bf635bb12e6c63a379cb167ab5bb" //test cETH contract
   });
 
   // // interact with contract
   const receipt = await contract
     .burn(
       account.address, //cfx address
-      Drip.fromCFX(0.495), //amount to withdraw from conflux
-      Drip.fromCFX(0.005), //amount of fees to pay (found in the corresponding shuttleflow token info)
+      Drip.fromCFX(1), //amount to withdraw from conflux
+      Drip.fromCFX(0.03), //amount of fees to pay (found in the corresponding shuttleflow token info)
       "0xAE36E9B5086B76Fd960b90A9cD33d5CFd7536267", //ethereum address
       "0x0000000000000000000000000000000000000000" //type of withdrawal (matching defi_address)
     )

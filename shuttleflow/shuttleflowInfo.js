@@ -2,7 +2,8 @@ const crosschain = require("conflux-crosschain");
 
 crosschain.test_conf = {
   // usdt_addr: // usdt address on rinkeby testnet,
-  node_url: "https://dev.shuttleflow.io/"
+  node_url: "https://dev.shuttleflow.io/", //rinkeby <=> testnet
+  // node_url: "http://23.102.224.244:8101/", //kovan <=> testnet
 };
 const test_conf = crosschain.test_conf;
 

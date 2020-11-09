@@ -2,7 +2,8 @@ const crosschain = require("conflux-crosschain");
 
 crosschain.test_conf = {
   // usdt_addr: // usdt address on rinkeby testnet,
-  node_url: "https://dev.shuttleflow.io/"
+  node_url: "https://dev.shuttleflow.io/", //rinkeby <=> testnet
+  // node_url: "http://23.102.224.244:8101/", //kovan <=> testnet
 };
 const test_conf = crosschain.test_conf;
 const cfx_address = "0x15fd1E4F13502b1a8BE110F100EC001d0270552d"; //copnflux address
@@ -19,8 +20,8 @@ const main = async () => {
   const status = await crosschain.getUserOperationList(
     {
       address: cfx_address, // for example
-      // type: "mint", //show transactions (ETH => CFX)
-      type: "burn", //show burn transactions (CFX => ETH)
+      type: "mint", //show transactions (ETH => CFX)
+      // type: "burn", //show burn transactions (CFX => ETH)
       token: "eth", //token type dependent on token list
       defi: defi_address,
       status: ["finished", "doing"]
