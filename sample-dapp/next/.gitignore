@@ -1,0 +1,42 @@
+site/.expo/*
+site/*.jks
+site/*.p8
+site/*.p12
+site/*.key
+site/*.mobileprovision
+site/*.orig.*
+site/web-build/
+site/web-report/
+site/.next/*
+
+# dependencies
+**/node_modules
+**/.pnp*
+
+# testing
+**/coverage
+
+# next.js
+site/.next/
+site/out/
+
+# production
+site/build
+
+# misc
+**/.DS_Store
+**/*.pem
+
+# debug
+**/npm-debug.*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
