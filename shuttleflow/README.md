@@ -8,7 +8,7 @@
 `withdraw2eth` allows a user to burn cTokens on Conflux to send the wrapped asset back to themselves on ETH
 
 ### Links
-Oceanus <=> Rinkeby Endpoint: [https://dev.shuttleflow.io/](https://dev.shuttleflow.io/)
+Testnet <=> Rinkeby Endpoint: [https://dev.shuttleflow.io/](https://dev.shuttleflow.io/)
 
 Documentation: [https://conflux-dev.github.io/conflux-dex-docs/shuttleflow/](https://conflux-dev.github.io/conflux-dex-docs/shuttleflow/)
 
