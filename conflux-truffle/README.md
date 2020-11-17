@@ -18,7 +18,6 @@ cfxtruffle -h
 
 Install the Conflux node docker container:
 ```
-pull image
 docker pull confluxchain/conflux-rust
 ```
 Start up the docker container
